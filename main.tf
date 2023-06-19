@@ -70,7 +70,8 @@ resource "aws_volume_attachment" "labtest_attachment" {
 # Create S3 bucket
 resource "aws_s3_bucket" "labtest_bucket" {
   bucket = "labtest-bucket" 
-
+  acl    = var.acl_value 
+  
   tags = {
     Owner = "ajain3"
   }
