@@ -20,7 +20,7 @@ resource "aws_vpc" "labtest_vpc" {
 
   tags = {
     Name  = "labtest-vpc"
-	Owner = "ajain"
+	  Owner = "ajain"
   }
 }
 
@@ -31,7 +31,7 @@ resource "aws_subnet" "labtest_subnet" {
 
   tags = {
     Name = "labtest-subnet"
-	Owner = "ajain"
+	  Owner = "ajain"
   }
 }
 
@@ -45,6 +45,7 @@ resource "aws_instance" "labtest_instance" {
 
   tags = {
     Name = "labtest-instance-${count.index + 1}"
+    Owner = "ajain"
   }
 }
 
@@ -56,6 +57,7 @@ resource "aws_ebs_volume" "labtest_volume" {
 
   tags = {
     Name = "labtest-volume-${count.index + 1}"
+    Owner = "ajain"
   }
 }
 
